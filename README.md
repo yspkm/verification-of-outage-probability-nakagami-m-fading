@@ -1,6 +1,6 @@
 # Verification of Outage Probability of UAV Communications in the Presence of Interference with Nakagami-m fading instead of Racian fading.
 
-[link]: https://ieeexplore.ieee.org/document/8647521	"Outage Probability of UAV Communications in the Presence of Interference"
+[Outage Probability of UAV Communications in the Presence of Interference](https://ieeexplore.ieee.org/document/8647521)
 
 Unlike terrestrial communications, unmanned aerial vehicle (UAV) communications have some advantages such as line-of-sight (LoS) environment and flexible mobility. However, the interference will be still inevitable. In this paper, we analyze the effect of the interference on the UAV communications by considering the LoS probability and different channel fadings for LoS and non-line-of-sight (NLoS) links, which are affected by the elevation angle of the communication link. We then derive a closed-form outage probability in the presence of an interfering node for all the possible scenarios and environments of main and interference links. After discussing the impacts of transmitting and interfering node parameters on the outage probability, we show the existence of the optimal height of the UAV that minimizes the outage probability. We also show the NLoS environment can be better than the LoS environment if the average received power of the interference is more dominant than that of the transmitting signal in UAV communications.
 
