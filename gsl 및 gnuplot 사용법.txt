@@ -1,0 +1,41 @@
+1. GSL 사용법
+
+sudo apt-get install libgsl-dev
+
+#include <gsl/gsl_??.h>
+
+gcc -Wall -I/usr/local/include -c ??.c
+gcc -L/usr/local/lib example.o -lgsl -lgslcblas -lm
+
+
+2. gnuplot 사용법
+
+sudo apt-get install gnuplot-x11
+
+
+FILE *fptr = popen("gnuplot", "w"); // pipe 연결
+if (!fptr) {
+	perror("popen");
+	exit(EXIT_FAILURE);
+}
+
+// CASE 1: 직접 데이터 찍기
+	fprintf(gnuplot, "plot '-' u 1:2 t 'Price' w lp\n");
+	FOR i in [0..n-1]
+		fprintf(fptr, "%d %d", x[i], y[i]);
+	END FOR
+	fprintf(fptr, "추가 메시지");
+	fflush(fptr);
+
+// CASE 2: 텍스트 파일 읽어오기
+	const char *filename = "input.txt";
+		input.txt 내용
+			...
+			x값 y값
+			...
+	fprintf(gnuplot, "plot \"%s\" t 'Price' w lp\n", filename);
+	fprintf(fptr, "추가 메시지");
+	fflush(fptr);
+
+pclose(fptr);
+exit(EXIT_SUCCESS);
